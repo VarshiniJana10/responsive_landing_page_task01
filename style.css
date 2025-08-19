@@ -1,0 +1,208 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #ffd3be;
+}
+
+/* Navbar */
+nav {
+    /* background: #0082e6; */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: relative;
+}
+
+
+
+.login, .signup {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #ff6d41;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color:black;
+}
+.logo h1 b {
+    color: #ff5e2d;
+}
+
+p {
+    color: #2c3e50; /* change to any color you like */
+}
+
+
+/* Nav Links */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #ffd3be;
+}
+
+/* Nav Buttons */
+.nav-buttons input {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #ff511c;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.checkbtn {
+    font-size: 30px;
+    color: black;
+    display: none;
+    cursor: pointer;
+}
+#check {
+    display: none;
+}
+
+/* Content */
+.content {
+    display: flex;
+    gap: 30px;
+    margin: 120px 50px 50px 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-left h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.content-left p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.content-left button {
+    padding: 10px 23px;
+    background-color: #ff511c;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Content Image */
+.content-right img {
+    width: 800px;
+    height: auto;
+}
+
+/* Category Section */
+.category {
+    padding: 50px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.book-title h1 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.Book-Desc p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.price span {
+    color: #ff511c;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 952px) {
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    nav ul li a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #2c3e50;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        gap: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: black;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .content {
+        flex-direction: column;
+        margin: 50px 20px;
+    }
+
+    .content-right img {
+        width: 100%;
+    }
+}
